@@ -1,11 +1,20 @@
-<!DOCTYPE html>
+---
+import Card from "../components/Card.astro";
+import Flexboxexample from "../components/Flexboxexample.astro";
+---
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Astro About</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>About</h1>
-</body>
+    <Card title="Card1" text="card text 1" />
+    <Card title="Card2" text="card text 1" />
+    <Card title="Card3" text="card text 1" />
+    <Flexboxexample />
+  </body>
 </html>

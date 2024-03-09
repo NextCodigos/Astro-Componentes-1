@@ -1,0 +1,43 @@
+---
+// const {title, text, imagen,name,date} = Astro.props
+const {post:{title, text, imagen,name,date}} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astro CARD</title>
+    <!-- <link rel="stylesheet" href="css/estilos-flex.css"> -->
+    <!-- <link rel="stylesheet" href="css/estilos-grid.css" /> -->
+  </head>
+  <body>
+    <div class="container__background-triangle">
+      <div class="triangle triangle1"></div>
+      <div class="triangle triangle2"></div>
+      <div class="triangle triangle3"></div>
+    </div>
+
+    <div class="container__cards">
+      <div class="card">
+        <div class="cover__card">
+          <img src={imagen} alt="" />
+        </div>
+        <h2>{title}</h2>
+        <p>
+          {text}
+        </p>
+        <hr />
+        <div class="footer__card">
+          <h3 class="user__name">{name}</h3>
+          <i>{new Date(date).toLocaleDateString()}</i>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
+
+

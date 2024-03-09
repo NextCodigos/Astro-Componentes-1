@@ -1,20 +1,49 @@
 ---
-import Card from '../components/Card.astro';
+import Cards from "../components/Cards.astro";
 
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-		<Card title="Card1" text="card text 1"></Card>
-		<Card title="Card2" text="card text 1"></Card>
-		<Card title="Card3" text="card text 1"></Card>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <h1>Astro</h1>
+
+    <div>
+      <Cards
+        post={{
+          name: "Mamie Barnett",
+          imagen: "../../public/img-1.jpg",
+          title: "Card1",
+          text: "card text 1",
+          date: "8/03/24",
+        }}
+      />
+      <Cards
+        post={{
+          name: "Mamie Barnett2",
+          imagen: "../../public/img-2.jpg",
+          title: "Card1",
+          text: "card text 1",
+          date: "8/03/24",
+        }}
+      />
+      <Cards
+        post={{
+          name: "Mamie Barnett3",
+          imagen: "../../public/img-3.jpg",
+          title: "Card1",
+          text: "card text 1",
+          date: "8/03/24",
+        }}
+      />
+    </div>
+
+    <!-- <Flexboxexample/> -->
+  </body>
 </html>
