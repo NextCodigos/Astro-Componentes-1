@@ -1,0 +1,93 @@
+Tenia el readme en repositorio github y no hice git pull y me error:
+
+❯ git add .
+❯ git commit -m "Creando Layout del navbar reutilizable y con valor por defecto sino lo pongo en index.astro me coje de DefaultLayout.astro"
+[main adf44ff] Creando Layout del navbar reutilizable y con valor por defecto sino lo pongo en index.astro me coje de DefaultLayout.astro
+ 7 files changed, 1232 insertions(+), 19 deletions(-)
+ create mode 100644 creandoLayout.txt
+ create mode 100644 src/layouts/DefaultLayout.astro
+ create mode 100644 tailwind.config.mjs
+❯ git push
+To https://github.com/NextCodigos/Astro-Componentes-1.git
+ ! [rejected]        main -> main (fetch first)
+error: falló el empuje de algunas referencias a 'https://github.com/NextCodigos/Astro-Componentes-1.git'
+ayuda: Actualizaciones fueron rechazadas porque el remoto contiene trabajo que
+ayuda: no existe localmente. Esto es causado usualmente por otro repositorio
+ayuda: empujando a la misma ref. Quizás quieras integrar primero los cambios
+ayuda: remotos (ej. 'git pull ...') antes de volver a hacer push.
+ayuda: Mira 'Notes about fast-forwards' en 'git push --help' para detalles.
+❯ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Desempaquetando objetos: 100% (3/3), 2.66 KiB | 2.66 MiB/s, listo.
+Desde https://github.com/NextCodigos/Astro-Componentes-1
+   5545273..123e414  main       -> origin/main
+ayuda: Hacer un pull sin especificar cómo reconciliar las ramas es poco
+ayuda: recomendable. Puedes eliminar este mensaje usando uno de los
+ayuda: siguientes comandos antes de tu siguiente pull:
+ayuda: 
+ayuda:   git config pull.rebase false  # hacer merge (estrategia por defecto)
+ayuda:   git config pull.rebase true   # aplicar rebase
+ayuda:   git config pull.ff only       # aplicar solo fast-forward
+ayuda: 
+ayuda: Puedes reemplazar "git config" con "git config --global" para aplicar
+ayuda: la preferencia en todos los repositorios. Puedes también pasar --rebase,
+ayuda: --no-rebase, o --ff-only en el comando para sobrescribir la configuración
+ayuda: por defecto en cada invocación.
+fatal: Necesita especificar cómo reconciliar las ramas divergentes.
+
+  ╱  ~/M/F/Astro-Fazt/cardspolimorfismo ╱ on   main ⇣1⇡1       
+
+/////////////////////////////////////77
+
+Resumen de la situación:
+
+    Tienes cambios locales sin enviar a GitHub.
+    Intentaste hacer un git push, pero falló porque el repositorio remoto tiene cambios que no están en tu repositorio local.
+    Hiciste un git pull para actualizar tu repositorio local con los cambios remotos.
+    Ahora, necesitas especificar cómo quieres reconciliar las ramas divergentes antes de hacer un git push nuevamente.
+
+Opciones para reconciliar las ramas:
+
+1. Hacer un merge (opción por defecto):
+
+    Esta es la estrategia más segura y recomendada.
+    Git creará una nueva "commit de fusión" que combina los cambios de ambas ramas.
+    Es posible que haya conflictos que debas resolver manualmente.
+
+Para hacer un merge:
+
+git config pull.rebase false
+git pull
+
+2. Aplicar un rebase:
+
+    Esta estrategia reescribe la historia de tu rama local para que coincida con la rama remota.
+    Es más limpio y ordenado que un merge, pero puede ser más difícil de resolver si hay conflictos.
+
+Para aplicar un rebase:
+
+git config pull.rebase true
+git pull
+
+3. Aplicar un "fast-forward" (solo si es posible):
+
+    Esta es la opción más simple y rápida.
+    Solo se puede usar si tu rama local está adelantada a la rama remota sin divergencias.
+
+Para aplicar un "fast-forward":
+
+git config pull.ff only
+git pull
+
+Recomendación:
+
+Para este caso, te recomiendo usar la opción de merge (opción 1). Es la estrategia más segura y te ayudará a evitar conflictos.
+Pasos siguientes:
+
+    Elige la opción que mejor se adapte a tus necesidades.
+    Sigue las instrucciones para ejecutar la opción elegida.
+    Si hay conflictos, resuélvelos manualmente.
+    Haz un git push para enviar tus cambios a GitHub.
