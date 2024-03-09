@@ -1,6 +1,6 @@
 ---
 import Cards from "../components/Cards.astro";
-
+import Card3 from "../components/Card3.astro";
 ---
 
 <html lang="en">
@@ -13,36 +13,39 @@ import Cards from "../components/Cards.astro";
   </head>
   <body>
     <h1>Astro</h1>
-
-    <div>
-      <Cards
-        post={{
-          name: "Mamie Barnett",
-          imagen: "../../public/img-1.jpg",
-          title: "Card1",
-          text: "card text 1",
-          date: "8/03/24",
-        }}
-      />
-      <Cards
-        post={{
-          name: "Mamie Barnett2",
-          imagen: "../../public/img-2.jpg",
-          title: "Card1",
-          text: "card text 1",
-          date: "8/03/24",
-        }}
-      />
-      <Cards
-        post={{
-          name: "Mamie Barnett3",
-          imagen: "../../public/img-3.jpg",
-          title: "Card1",
-          text: "card text 1",
-          date: "8/03/24",
-        }}
-      />
-    </div>
+	<Card3 />
+    <!-- <main>
+      <div>
+        <Cards
+          post={{
+            name: "Mamie Barnett",
+            imagen: "../../public/img-1.jpg",
+            title: "Card1",
+            text: "card text 1",
+            date: "8/03/24",
+          }}
+        />
+        <Cards
+          post={{
+            name: "Mamie Barnett2",
+            imagen: "../../public/img-2.jpg",
+            title: "Card1",
+            text: "card text 1",
+            date: "8/03/24",
+          }}
+        />
+        <Cards
+          post={{
+            name: "Mamie Barnett3",
+            imagen: "../../public/img-3.jpg",
+            title: "Card1",
+            text: "card text 1",
+            date: "8/03/24",
+          }}
+        />
+         <Card3/>
+      </div>
+    </main> -->
 
     <!-- <Flexboxexample/> -->
   </body>
